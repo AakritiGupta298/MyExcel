@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="menu-container">
+        <div class="menu btn btn-primary" id="File">File</div>
+        <div class="menu btn btn-primary" id="Home">Home</div>
+    </div>
+
+    <div class="menu-option-container">
+        <div class="menu-options" id="File-menu-options">
+
+            <div id="New" class="space btn btn-secondary">New</div>
+            <div id="Open" class="space btn btn-secondary">Open</div>
+            <div id="Save" class="space btn btn-secondary">Save</div>
+        </div>
+        <div class="menu-options" id="Home-menu-options">
+
+            <div class="menu-group">
+                <div class="menu-row">
+
+                    <select name="" id="font-family" class="btn btn-secondary dropdown-toggle">
+                        <option value="Arial" class="dropdown-item">Arial</option>
+                        <option value="Calibri" class="dropdown-item">Calibri</option>
+                        <option value="sans-serif" class="dropdown-item">Sans-Serif</option>
+                        <option value="algerian" class="dropdown-item">Algerian</option>
+                        <option value="impact" class="dropdown-item">Impact</option>
+                        <option value="courier new" class="dropdown-item">Courier New</option>
+                        <option value="Comic Sans MS" class="dropdown-item">Comic Sans MS</option>
+                        <option value="Cambria" class="dropdown-item">Cambria</option>
+                        <option value="Georgia" class="dropdown-item">Georgia</option>
+                        <option value="monospace" class="dropdown-item">Monospace</option>
+                        
+                    </select>
+
+                    <select name="fontSize" id="font-size" class="btn btn-secondary dropdown-toggle">
+                        <option value="10" class="dropdown-item">10</option>
+                        <option value="11" class="dropdown-item">11</option>
+                        <option value="12" class="dropdown-item">12</option>
+                        <option value="13" class="dropdown-item">13</option>
+                        <option value="14" class="dropdown-item">14</option>
+                        <option value="15" class="dropdown-item">15</option>
+                        <option value="16" class="dropdown-item">16</option>
+                    </select>
+               
+                    <i type="button" class="fa fa-bold" id="bold" aria-hidden="true"></i>
+                    <i type="button" class="fa fa-underline" id="underline" aria-hidden="true"></i>
+                    <i type="button" id="italic"  class="fa fa-italic" aria-hidden="true"></i>
+                    <i type="color" id="bg-color" class="material-icons">font_download</i>
+                    <input type="color" id="bg-color-palette" value="rebeccapurple" style="display: none;">
+                    <i type="color" id="text-color" class="material-icons">text_format</i>
+                    <input type="color" id="text-color-palette" value="gray" style="display: none;">
+                
+        
+                <i type="button" id="left"  halign="left" class="fa fa-align-left" aria-hidden="true"></i>
+                <i type="button" id="center" halign="center" class="fa fa-align-center" aria-hidden="true"></i>
+                <i type="button" id="right" halign="right" class="fa fa-align-right" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    <div class="formula-container">
+        Formula
+        <input type="text" readonly="true" id="address-input">
+        <input type="text" id="formula-input">
+    </div>
+    <div class="content-container">
+        <div id="top-left-cell" class="top-left-cell"></div>
+        <div id="top-row" class="top-row">
+            <%for(let j=0;j<cols;j++){%>
+            <div class="cell">
+                <%= String.fromCharCode(j+65) %>
+            </div>
+            <%}%>
+        </div>
+        <div id="left-col" class="left-col">
+            <%for(let j=1;j<=rows;j++){%>
+            <div class="cell" contenteditable="true" >
+                <%= j %>
+            </div>
+            <%}%>
+        </div>
+         <div id="grid" class="grid">
+            <%for(let i=0;i<rows;i++){%>
+            <div class="row">
+                <%for(let j=0;j<cols;j++){%>
+                <div class="cell" contenteditable="true" r-id=<%=i%> c-id=<%=j%>>
+                </div>
+                <%}%> 
+            </div>
+                    <%}%>
+            </div> 
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

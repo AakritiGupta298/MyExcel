@@ -1,0 +1,113 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.menu-container{
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 124px;
+}
+
+.menu-option-container{
+    height: 80px;
+    
+    align-items: center;
+    display: block;
+}
+
+.menu-options{
+  display: none;  
+}
+
+.space{
+    margin-right: 3px;
+}
+
+.menu-options.selected{
+    display: flex;
+    justify-content: inherit;
+    align-items: center;
+    height: 100%;
+}
+
+input[type="button"].isOn{
+    background-color: lightslategrey;
+}
+
+.formula-container{
+    height: 28px;
+}
+
+.sheets-container{
+    height: 20px;
+    border: 1px solid grey;
+}
+
+.row{
+    
+    min-height: 26px;
+    display:flex;
+    flex-wrap: nowrap;
+}
+
+.cell{
+    min-height: 26px;
+    border: 1px solid;
+    text-align: center;
+}
+
+.content-container{
+    height: calc(100vh - 128px);
+    overflow: auto;
+    position: relative;
+}
+
+.top-left-cell{
+    height: 25px;
+    width: 30px;
+    background-color: gray;
+    z-index:3;
+    position: absolute;
+}
+
+.top-row{
+    display: flex;
+    position: absolute;
+    left: 30px;
+    top: 0px;
+    z-index:2;
+    background-color: #0494D5;
+}
+
+.top-row>.cell{
+min-width: 74px;
+}
+
+.left-col{
+position: absolute;
+z-index:2;
+background-color: #0494D5;
+top:25px;
+}
+
+.left-col>.cell{
+    width: 30px;
+}
+
+.grid{
+    position: absolute;
+    left:45px;
+    z-index:1;
+    top:25px;
+}
+
+.row>.cell{
+    width: 74px;
+}
+
