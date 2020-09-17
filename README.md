@@ -1,12 +1,20 @@
-#MyExcel
+# MyExcel
 
-Cross-platform Desktop Application using Electron and JQuery
+Electron enables you to create desktop applications with pure JavaScript by providing a runtime with rich native (operating system) APIs. You could see it as a variant of the Node.js runtime that is focused on desktop applications instead of web servers.
 
-The Electron framework lets us write cross-platform desktop applications using JavaScript, HTML and CSS. It is based on Node.js and Chromium. JQuery is a fast, small, and feature-rich JavaScript library
+### ***Features:***
+- Cells are responsive and can change their height according to the data in the cell keeping the width constant.
+- User can create new files, save the current file and open an existing file.
+- Grid can be scrolled in both hte directions keeping the naming row and column constant.
+- Cells can be formatted in the following ways:
+  * Font Style
+  * Font Size
+  * Font Color
+  * Cell Color
+  * Bold Styling
+  * Italics Styling
+  * Underline Styling
+  * Left, Right and Center Alignment
+- Name of the current cell is listed in the first formula box.
+- Formulas can be applied to a particular cell.
 
-Features:
-
-Responsive Cells
-Feature to create new, open and save file.
-Page can be scrolled
-Format cells i) Apply Font family, Font size, Font color, Fill color. ii) Align, Bold, Italic and Underline text 5)Excel application formula feature i) Perform calculations ii) Infix Evaluation (Data Structures) 
