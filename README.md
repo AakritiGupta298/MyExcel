@@ -18,3 +18,11 @@ Electron enables you to create desktop applications with pure JavaScript by prov
 - Name of the current cell is listed in the first formula box.
 - Formulas can be applied to a particular cell.
 
+### ***The screenshots below show the various editing options available in the app, shows the usage of formula in cells A1, B1 and C1 and options to save, create and open files.***
+
+![sample1](/Screenshots/1.png)
+
+
+![sample2](/Screenshots/2.png)
+
+
